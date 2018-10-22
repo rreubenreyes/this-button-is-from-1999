@@ -1,0 +1,28 @@
+@import './theme/theme';
+
+button {
+}
+
+button#the-button {
+  border-radius: 5px;
+  background-color: $button--color__primary;
+  color: $theme--color__light;
+  font-weight: 500;
+  padding: 0.75rem 1.75rem;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.spinny-spinny {
+    @include animation(animation-spinny-spinny 0.25s linear infinite);
+    animation-play-state: paused;
+    &:hover {
+      animation-play-state: running;
+    }
+  }
+}

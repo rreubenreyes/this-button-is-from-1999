@@ -1,0 +1,17 @@
+@import './theme/theme';
+
+@mixin animation($props) {
+  -webkit-animation: $props;
+  -moz-animation: $props;
+  -o-animation: $props;
+  animation: $props;
+}
+
+@keyframes animation-spinny-spinny {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates");
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates");
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates");
+@keyframes animation-spinny-spinny {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.app {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+button#the-button {
+  border-radius: 5px;
+  background-color: #ff616f;
+  color: #fcfcfc;
+  font-weight: 500;
+  padding: 0.75rem 1.75rem;
+}
+button#the-button:focus {
+  outline: none;
+}
+button#the-button:hover {
+  cursor: pointer;
+}
+button#the-button.spinny-spinny {
+  -webkit-animation: animation-spinny-spinny 0.25s linear infinite;
+  -moz-animation: animation-spinny-spinny 0.25s linear infinite;
+  -o-animation: animation-spinny-spinny 0.25s linear infinite;
+  animation: animation-spinny-spinny 0.25s linear infinite;
+  animation-play-state: paused;
+}
+button#the-button.spinny-spinny:hover {
+  animation-play-state: running;
+}
+
+* {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/*# sourceMappingURL=style.css.map */
