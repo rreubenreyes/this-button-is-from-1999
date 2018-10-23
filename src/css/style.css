@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates");
+@import url("https://fonts.googleapis.com/css?family=Delius");
 @import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates");
+@import url("https://fonts.googleapis.com/css?family=Delius");
 @import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates");
-@keyframes animation-spinny-spinny {
+@import url("https://fonts.googleapis.com/css?family=Delius");
+@keyframes spinny-spinny {
   0% {
     transform: rotate(0deg);
   }
@@ -30,14 +33,31 @@ button#the-button:hover {
   cursor: pointer;
 }
 button#the-button.spinny-spinny {
-  -webkit-animation: animation-spinny-spinny 0.25s linear infinite;
-  -moz-animation: animation-spinny-spinny 0.25s linear infinite;
-  -o-animation: animation-spinny-spinny 0.25s linear infinite;
-  animation: animation-spinny-spinny 0.25s linear infinite;
+  -webkit-animation: spinny-spinny 0.25s linear infinite;
+  -moz-animation: spinny-spinny 0.25s linear infinite;
+  -o-animation: spinny-spinny 0.25s linear infinite;
+  animation: spinny-spinny 0.25s linear infinite;
   animation-play-state: paused;
 }
 button#the-button.spinny-spinny:hover {
   animation-play-state: running;
+}
+button#the-button.u-wot-m8:after {
+  color: #333;
+  content: "u fukin wot m8 ill fuckin rek ur ass swear on me mum come ere and fukin try it m8 i fukin dare u fukin puss u fukin wot m8 u avin a giggle m8?";
+  font-family: "Delius", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  left: 100vw;
+  position: absolute;
+  text-align: center;
+  transition: 0s linear;
+  width: 100vw;
+  white-space: nowrap;
+}
+button#the-button.u-wot-m8:hover:after {
+  left: -1000vw;
+  transition: 10s linear;
 }
 
 * {
@@ -48,6 +68,7 @@ button#the-button.spinny-spinny:hover {
 body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

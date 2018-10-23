@@ -1,8 +1,5 @@
 @import './theme/theme';
 
-button {
-}
-
 button#the-button {
   border-radius: 5px;
   background-color: $button--color__primary;
@@ -19,10 +16,33 @@ button#the-button {
   }
 
   &.spinny-spinny {
-    @include animation(animation-spinny-spinny 0.25s linear infinite);
+    @include animation(spinny-spinny 0.25s linear infinite);
     animation-play-state: paused;
     &:hover {
       animation-play-state: running;
+    }
+  }
+
+  &.u-wot-m8 {
+    &:after {
+      color: $theme--color__dark;
+      content: 'u fukin wot m8 ill fuckin rek ur ass swear on me mum come ere and fukin try it m8 i fukin dare u fukin puss u fukin wot m8 u avin a giggle m8?';
+      font-family: $theme--font__cartoon, sans-serif;
+      font-size: 5rem;
+      font-weight: 700;
+      left: 100vw;
+      position: absolute;
+      text-align: center;
+      transition: 0s linear;
+      width: 100vw;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      &:after {
+        left: -1000vw;
+        transition: 10s linear;
+      }
     }
   }
 }

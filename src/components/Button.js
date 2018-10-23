@@ -5,7 +5,7 @@ import composeObject from '../helpers/composeObject'
 export default class Button extends Component {
   constructor() {
     super()
-
+    // TODO: load a different script on every CDU
     /* grab all possible keys from Memes object and load to state */
     const keys = Object.keys(Memes)
     const values = keys.map(() => ({ class: '' }))
@@ -19,7 +19,7 @@ export default class Button extends Component {
     this.button = createRef()
   }
 
-  componentDidMount = () => {
+  componentWillMount = () => {
     /* set state to all random properties from Memes source object */
     const keys = Object.keys(Memes)
     const values = keys.map(meme => this.pickRandomMeme(Memes[meme]))
